@@ -1,0 +1,6 @@
+1.0:
+- added raw & ugly pygame support for joysticks
+- changed default sampling to 192khz and let ALSA decide what to do
+- changed ALSA PCM handling for lag-free control
+- code still ugly! :)
+- joystick channels hardcoded, change axis and channels in source code
