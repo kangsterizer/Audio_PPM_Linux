@@ -5,7 +5,7 @@ Many radios however work with any amplitude.. then again the DX7 does not.
 
 There's more info on http://www.insecure.ws/
 
-Oh yeah.. you'll need gtk, pygtk, pyalsaaudio, alsa and python to run this program.
+Oh yeah.. you'll need gtk, pygtk, pyalsaaudio, pygame, alsa and python to run this program.
 Just type ./ppm.py to start. If it complains, it should tell you what's missing to run.
 
 The code isn't especially nice, I threw it together quickly (yeah, never heard that excuse before did you?). Nevertheless, it works fine as a demo.
