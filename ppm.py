@@ -49,10 +49,10 @@ def getsignal(i):
 class GenSignal:
 	signal = ""
 	duration = 0.0225 # seconds
-	mmdiv = 4.4 #0.1ms
-	mmdiv = 19.2
 	samplerate = 44100 # Hz
 	samplerate = 192000
+
+	mmdiv = float(samplerate)/10000
 	samples = int(duration*samplerate) #992.25
 #	amplitude = 32760 #max volume
 	amplitude = 20262
@@ -197,9 +197,9 @@ class Signal(threading.Thread):
 	signal = ""
 	card = PCM(type=PCM_PLAYBACK, mode=PCM_NONBLOCK, card='default')
 	card.setchannels(2)
-	card.setrate(192000)
+	card.setrate(GenSignal.samplerate)
 	card.setformat(PCM_FORMAT_S16_LE)
-	card.setperiodsize(192000)
+	card.setperiodsize(int(GenSignal.samplerate * GenSignal.duration))
 	print "Sound card initialized"
 
 	def __init__(self, q):
